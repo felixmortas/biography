@@ -20,10 +20,26 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    margin: 0 0 0.5rem;
     font-size: 2.5rem;
     letter-spacing: 1px;
 }
+header h4 {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+
 
 .coordonnes {
     background: linear-gradient(135deg, #333, #78828c);
@@ -87,8 +103,12 @@ article h3 {
     padding-left: 10px;
 }
 
+b {
+    color:#444;
+}
+
 /* Style pour les liens dans la section compétences */
-.competences a {
+.introduction a, .competences a {
     color: #6e8efb; /* Couleur de base pour les liens */
     text-decoration: none;
     font-weight: bold;
@@ -97,12 +117,12 @@ article h3 {
     padding-bottom: 3px;
 }
 
-.competences a:hover {
+.introduction a:hover, .competences a:hover {
     color: #a777e3; /* Couleur au survol */
     text-decoration: none;
 }
 
-.competences a::after {
+.introduction a::after, .competences a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -113,7 +133,7 @@ article h3 {
     transition: width 0.3s ease;
 }
 
-.competences a:hover::after {
+.introduction a:hover::after, .competences a:hover::after {
     width: 100%; /* La ligne s'étend sur toute la largeur au survol */
     background-color: #a777e3;
 }
